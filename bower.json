@@ -1,0 +1,29 @@
+{
+  "name": "bootstrap-dropdown",
+  "version": "1.0.7",
+  "authors": [
+    "Miguel Ortega Moreno <miguel.ortega.moreno5@gmail.com>"
+  ],
+  "description": "Glyphicon using polymer",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "seed",
+    "dropdown"
+  ],
+  "main": "bootstrap-dropdown.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/mortega5/polymer-bootstrap/",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.2.0",
+    "bootstrap-glyphicon": "^1.0.8"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0"
+  }
+}
