@@ -15,18 +15,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 An element providing the interface for any site of exchanges
 Example:
 ```
-<bootstrap-dropdown></bootstrap-dropdown>
+<bs-dropdown></bs-dropdown>
 ```
 Custom property | Description | Default
 ----------------|-------------|----------
-`--bootstrap-dropdown-btn-toggle` | Mixin applied to bootstrap-dropdown button  | `{}`
-`--bootstrap-dropdown-btn-toggle-focused` | Mixin applied to bootstrap-dropdown button when is focused  | `{}`
-`--bootstrap-dropdown-dropdown-box` | Mixin aplied to menu box that contains menu options | `{}`
-`--bootstrap-dropdown-dropdown-menuItem-hover` | Mixin aplied to menu item when it is hovered | `{}`
-`--bootstrap-dropdown-divider` | Mixin aplied to divider | `{}`
+`--bs-dropdown-btn-toggle` | Mixin applied to bs-dropdown button  | `{}`
+`--bs-dropdown-btn-toggle-focused` | Mixin applied to bs-dropdown button when is focused  | `{}`
+`--bs-dropdown-box` | Mixin aplied to menu box that contains menu options | `{}`
+`--bs-dropdown-menuItem-hover` | Mixin aplied to menu item when it is hovered | `{}`
+`--bs-dropdown-divider` | Mixin aplied to divider | `{}`
 -->
 
-<dom-module id="bootstrap-dropdown">
+<dom-module id="bs-dropdown">
   <template>
   <style is="custom-style">
   :host {
@@ -59,7 +59,7 @@ Custom property | Description | Default
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
-    @apply(--bootstrap-dropdown-btn-toggle);
+    @apply(--bs-dropdown-btn-toggle);
   }
   .dropdown[reverse] .dropdown-menu {
     top: auto;
@@ -72,7 +72,7 @@ Custom property | Description | Default
     color: #fff;
     background-color: #204d74;
     border-color: #122b40;
-    @apply(--bootstrap-dropdown-btn-toggle-focused);
+    @apply(--bs-dropdown-btn-toggle-focused);
   }
   .caret {
     display: inline-block;
@@ -100,7 +100,7 @@ Custom property | Description | Default
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
     padding:5px 0;
-    @apply(--bootstrap-dropdown-dropdown-box);
+    @apply(--bs-dropdown-box);
   }
   .dropdown[reverse] .dropdown-menu {
     top: auto;
@@ -112,7 +112,7 @@ Custom property | Description | Default
     margin: 9px 0;
     overflow: hidden;
     background-color: #e5e5e5;
-    @apply(--bootstrap-dropdown-divider);
+    @apply(--bs-dropdown-divider);
   }
   .dropdown-menu>div>a{
     display: block;
@@ -129,7 +129,7 @@ Custom property | Description | Default
   }
   .dropdown-menu>div:hover{
     background-color: #eee;
-    @apply(--bootstrap-dropdown-dropdown-menuItem-hover);
+    @apply(--bs-dropdown-menuItem-hover);
   }
   bootstrap-glyphicon[icon] {
     margin-right: 8px;
@@ -159,7 +159,7 @@ Custom property | Description | Default
 
 <script>
 Polymer({
-  is: 'bootstrap-dropdown',
+  is: 'bs-dropdown',
   hostAttributes:{
     tabindex:0
   },
@@ -237,7 +237,7 @@ Polymer({
 </script>
 </dom-module>
 
-<dom-module id="bootstrap-dropdown-item">
+<dom-module id="bs-dropdown-item">
   <template>
   <style>
   .item {
@@ -249,12 +249,12 @@ Polymer({
     color: #333;
     white-space: nowrap;
     text-decoration: none;
-    @apply(--bootstrap-dropdown-item)
+    @apply(--bs-dropdown-item)
   }
   .item:hover{
     background-color:#eee;
     cursor:pointer;
-    @apply(--bootstrap-dropdown-item-hovered)
+    @apply(--bs-dropdown-item-hovered)
   }
   </style>
   <div class="item">
@@ -263,7 +263,7 @@ Polymer({
 </template>
 <script>
 Polymer({
-  is:'bootstrap-dropdown-item',
+  is:'bs-dropdown-item',
   properties:{}
 })
 </script>

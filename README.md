@@ -1,4 +1,4 @@
-# bootstrap-dropdown
+# bs-dropdown
 
 Create a dropdown using a polymer element. It's based on boostrap dropdown.
 
@@ -6,19 +6,19 @@ Create a dropdown using a polymer element. It's based on boostrap dropdown.
 * Using content
 
 ``` html
-<bootstrap-dropdown btn_title="Content">
+<bs-dropdown btn_title="Content">
   <div class="menu-content">
     <p>Link 1</p>
     <p>Link 2</p>
     <p>Link 3</p>
   </div>
-</bootstrap-dropdown>
+</bs-dropdown>
 ```
 
 * Using menu_items Array
 ```html
 <template id="bind" is="dom-bind">
-  <bootstrap-dropdown id="complexList" btn_title="Custom list items" menu_items="{{complexList}}"> </bootstrap-dropdown>
+  <bs-dropdown id="complexList" btn_title="Custom list items" menu_items="{{complexList}}"> </bs-dropdown>
 </template>
 
 <script>
@@ -62,16 +62,16 @@ NOTE: menu_items can be a single array with the names of the options fields.
   * icon: type of icon
 
 
-* Using bootstrap-dropdown-item (included in bootstrap-dropdown)
+* Using bs-dropdown-item (included in bs-dropdown)
 
 ```html
-  <bootstrap-dropdown btn_title="Toggle">
+  <bs-dropdown btn_title="Toggle">
     <div class="menu-content">
-      <bootstrap-dropdown-item>Example</bootstrap-dropdown-item>
-      <bootstrap-dropdown-item>Example</bootstrap-dropdown-item>
-      <bootstrap-dropdown-item>Example</bootstrap-dropdown-item>
+      <bs-dropdown-item>Example</bs-dropdown-item>
+      <bs-dropdown-item>Example</bs-dropdown-item>
+      <bs-dropdown-item>Example</bs-dropdown-item>
     </div>
-  </bootstrap-dropdown>
+  </bs-dropdown>
 ```
 
 ## Properties
@@ -94,22 +94,22 @@ NOTE: menu_items can be a single array with the names of the options fields.
 
 ## Style
 
-### bootstrap-dropdown
+### bs-dropdown
 
 | Attribute                                        | Description                                                | Default |
 |--------------------------------------------------|------------------------------------------------------------|---------|
-| __--bootstrap-dropdown-btn-toggle__              | Mixin applied to bootstrap-dropdown button                 | {}      |
-| __--bootstrap-dropdown-btn-toggle-focused__      | Mixin applied to bootstrap-dropdown button when is focused | {}      |
-| __--bootstrap-dropdown-dropdown-box__            | Mixin aplied to menu box that contains menu options        | {}      |
-| __--bootstrap-dropdown-dropdown-menuItem-hover__ | Mixin aplied to menu item when it is hovered               | {}      |
-| __--bootstrap-dropdown-divider__                 | Mixin aplied to divider                                    | {}      |
+| __--bs-dropdown-btn-toggle__              | Mixin applied to bs-dropdown button                 | {}      |
+| __--bs-dropdown-btn-toggle-focused__      | Mixin applied to bs-dropdown button when is focused | {}      |
+| __--bs-dropdown-box__            | Mixin aplied to menu box that contains menu options        | {}      |
+| __--bs-dropdown-menuItem-hover__ | Mixin aplied to menu item when it is hovered               | {}      |
+| __--bs-dropdown-divider__                 | Mixin aplied to divider                                    | {}      |
 
-### bootstrap-dropdown-item
+### bs-dropdown-item
 
 | Attribute                                        | Description                                              | Default |
 |--------------------------------------------------|----------------------------------------------------------|---------|
-| __--bootstrap-dropdown-item__                    | Mixin applied to bootstrap-dropdown-item                 | {}      |
-| __--bootstrap-dropdown-item-hovered__            | Mixin applied to bootstrap-dropdown-item when is focused | {}      |
+| __--bs-dropdown-item__                    | Mixin applied to bs-dropdown-item                 | {}      |
+| __--bs-dropdown-item-hovered__            | Mixin applied to bs-dropdown-item when is focused | {}      |
 
 ## Dependencies
 

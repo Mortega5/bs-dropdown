@@ -12,18 +12,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-  <title>bootstrap-dropdown Demo</title>
+  <title>bs-dropdown Demo</title>
   <script src="../bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-  <link rel="import" href="../bootstrap-dropdown.html">
+  <link rel="import" href="../bs-dropdown.html">
 </head>
 <body unresolved>
 <style is="custom-style">
-bootstrap-dropdown#second {
-  --bootstrap-dropdown-btn-toggle_focused: {
+bs-dropdown#second {
+  --bs-dropdown-btn-toggle_focused: {
     background-color:#fff;
     color:#333;
   };
-  --bootstrap-dropdown-btn-toggle: {
+  --bs-dropdown-btn-toggle: {
     background-color:#333;
   };
 
@@ -52,7 +52,7 @@ li:hover{
 }
 </style>
 <template is="dom-bind" id="bind">
-  <bootstrap-dropdown id="first">
+  <bs-dropdown id="first">
     <div class="menu-content">
       <div><a href="#action">Action</a></div>
       <div><a href="#action2">Another action</a></div>
@@ -60,28 +60,28 @@ li:hover{
       <div><a href="#action3">Something else here</a></div>
 
     </div>
-  </bootstrap-dropdown>
+  </bs-dropdown>
 
-  <bootstrap-dropdown id="custom-content" btn_title="Custom Style">
+  <bs-dropdown id="custom-content" btn_title="Custom Style">
     <div class="menu-content">
       <p>Example</p>
       <p>Example</p>
       <p>Example</p>
     </div>
-  </bootstrap-dropdown>
+  </bs-dropdown>
 
-  <bootstrap-dropdown id="dropup-content" btn_title="dropup" dropup>
+  <bs-dropdown id="dropup-content" btn_title="dropup" dropup>
     <div class="menu-content">
-      <bootstrap-dropdown-item>Example</bootstrap-dropdown-item>
-      <bootstrap-dropdown-item>Example</bootstrap-dropdown-item>
-      <bootstrap-dropdown-item>Example</bootstrap-dropdown-item>
+      <bs-dropdown-item>Example</bs-dropdown-item>
+      <bs-dropdown-item>Example</bs-dropdown-item>
+      <bs-dropdown-item>Example</bs-dropdown-item>
     </div>
-  </bootstrap-dropdown>
+  </bs-dropdown>
 
-  <bootstrap-dropdown id="list" btn_title="List items" menu_items="{{list}}">
-  </bootstrap-dropdown>
-  <bootstrap-dropdown id="complexList" btn_title="Custom list items" menu_items="{{complexList}}">
-  </bootstrap-dropdown>
+  <bs-dropdown id="list" btn_title="List items" menu_items="{{list}}">
+</bs-dropdown>
+  <bs-dropdown id="complexList" btn_title="Custom list items" menu_items="{{complexList}}">
+</bs-dropdown>
 
 </template>
 
