@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Bs-dropdown by Mortega5</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Bs-dropdown</h1>
+          <h2>Create a dropdown using a polymer element. It&#39;s based on boostrap dropdown.</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/Mortega5/bs-dropdown/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/Mortega5/bs-dropdown/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/Mortega5/bs-dropdown" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a id="bs-dropdown" class="anchor" href="#bs-dropdown" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>bs-dropdown</h1>
+
+<p>Create a dropdown using a polymer element. It's based on boostrap dropdown.</p>
+
+<h2>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example</h2>
+
+<ul>
+<li>Using content</li>
+</ul>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">bs</span><span class="pl-e">-dropdown</span> <span class="pl-e">btn</span>_title=<span class="pl-s"><span class="pl-pds">"</span>Content<span class="pl-pds">"</span></span>&gt;
+  &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>menu-content<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">p</span>&gt;Link 1&lt;/<span class="pl-ent">p</span>&gt;
+    &lt;<span class="pl-ent">p</span>&gt;Link 2&lt;/<span class="pl-ent">p</span>&gt;
+    &lt;<span class="pl-ent">p</span>&gt;Link 3&lt;/<span class="pl-ent">p</span>&gt;
+  &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">bs</span><span class="pl-e">-dropdown</span>&gt;</pre></div>
+
+<ul>
+<li>Using menu_items Array</li>
+</ul>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">template</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>bind<span class="pl-pds">"</span></span> <span class="pl-e">is</span>=<span class="pl-s"><span class="pl-pds">"</span>dom-bind<span class="pl-pds">"</span></span>&gt;
+  &lt;<span class="pl-ent">bs</span><span class="pl-e">-dropdown</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>complexList<span class="pl-pds">"</span></span> <span class="pl-e">btn</span>_title=<span class="pl-s"><span class="pl-pds">"</span>Custom list items<span class="pl-pds">"</span></span> <span class="pl-e">menu</span>_items=<span class="pl-s"><span class="pl-pds">"</span>{{complexList}}<span class="pl-pds">"</span></span>&gt; &lt;/<span class="pl-ent">bs</span><span class="pl-e">-dropdown</span>&gt;
+&lt;/<span class="pl-ent">template</span>&gt;
+
+<span class="pl-s1">&lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">  <span class="pl-k">var</span> bind <span class="pl-k">=</span> <span class="pl-c1">document</span>.<span class="pl-en">querySelector</span>(<span class="pl-s"><span class="pl-pds">'</span>#bind<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1">  <span class="pl-smi">bind</span>.<span class="pl-smi">complexList</span> <span class="pl-k">=</span> [</span>
+<span class="pl-s1">    {</span>
+<span class="pl-s1">      name<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>Load<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">      <span class="pl-en">onclick</span><span class="pl-k">:</span> <span class="pl-k">function</span>(){</span>
+<span class="pl-s1">        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">'</span>Clicked Load<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1">      },</span>
+<span class="pl-s1">      link<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>#load<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">      icon<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>folder-open<span class="pl-pds">'</span></span></span>
+<span class="pl-s1">    },</span>
+<span class="pl-s1">    {</span>
+<span class="pl-s1">      name<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>Save<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">      <span class="pl-en">onclick</span><span class="pl-k">:</span> <span class="pl-k">function</span>(){</span>
+<span class="pl-s1">        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">'</span>Clicked Save<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1">      },</span>
+<span class="pl-s1">      link<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>#option2<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">      icon<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>floppy-saved<span class="pl-pds">'</span></span></span>
+<span class="pl-s1">    },</span>
+<span class="pl-s1">    {</span>
+<span class="pl-s1">      name<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>Edit<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">      <span class="pl-en">onclick</span><span class="pl-k">:</span> <span class="pl-k">function</span>(){</span>
+<span class="pl-s1">        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">'</span>Clicked Edit<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1">      },</span>
+<span class="pl-s1">      link<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>#edit<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">      icon<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>pencil<span class="pl-pds">'</span></span></span>
+<span class="pl-s1">    }</span>
+<span class="pl-s1">  ]</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<p>NOTE: menu_items can be a single array with the names of the options fields.</p>
+
+<div class="highlight highlight-source-js"><pre>  <span class="pl-k">var</span> option_list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>Link1<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Link2<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Link3<span class="pl-pds">'</span></span>]</pre></div>
+
+<p>or it can be an object with some camps:</p>
+
+<pre><code>- Name: name of the field
+- onclick: function which will be invoke when the field is Clicked
+- icon: type of icon
+</code></pre>
+
+<ul>
+<li>Using bs-dropdown-item (included in bs-dropdown)</li>
+</ul>
+
+<div class="highlight highlight-text-html-basic"><pre>  &lt;<span class="pl-ent">bs</span><span class="pl-e">-dropdown</span> <span class="pl-e">btn</span>_title=<span class="pl-s"><span class="pl-pds">"</span>Toggle<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>menu-content<span class="pl-pds">"</span></span>&gt;
+      &lt;<span class="pl-ent">bs</span><span class="pl-e">-dropdown-item</span>&gt;Example&lt;/<span class="pl-ent">bs</span><span class="pl-e">-dropdown-item</span>&gt;
+      &lt;<span class="pl-ent">bs</span><span class="pl-e">-dropdown-item</span>&gt;Example&lt;/<span class="pl-ent">bs</span><span class="pl-e">-dropdown-item</span>&gt;
+      &lt;<span class="pl-ent">bs</span><span class="pl-e">-dropdown-item</span>&gt;Example&lt;/<span class="pl-ent">bs</span><span class="pl-e">-dropdown-item</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+  &lt;/<span class="pl-ent">bs</span><span class="pl-e">-dropdown</span>&gt;</pre></div>
+
+<h2>
+<a id="properties" class="anchor" href="#properties" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Properties</h2>
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>btn_title</td>
+<td>Change the button title</td>
+<td>Sting</td>
+<td>Dropdown</td>
+</tr>
+<tr>
+<td>dropup</td>
+<td>Menu list is showed above the button</td>
+<td>Boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>opened</td>
+<td>If true, menu list is showed</td>
+<td>Boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>menu_items</td>
+<td>If it is defined, all items in the array are menu items</td>
+<td>Array</td>
+<td>[]</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="methods" class="anchor" href="#methods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Methods</h2>
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open</td>
+<td>Open menu list</td>
+<td></td>
+</tr>
+<tr>
+<td>Close</td>
+<td>Close menu list</td>
+<td></td>
+</tr>
+<tr>
+<td>Toggle</td>
+<td>If menu list, it is opened, else closed</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="style" class="anchor" href="#style" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Style</h2>
+
+<h3>
+<a id="bs-dropdown-1" class="anchor" href="#bs-dropdown-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>bs-dropdown</h3>
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>--bs-dropdown-btn-toggle</strong></td>
+<td>Mixin applied to bs-dropdown button</td>
+<td>{}</td>
+</tr>
+<tr>
+<td><strong>--bs-dropdown-btn-toggle-focused</strong></td>
+<td>Mixin applied to bs-dropdown button when is focused</td>
+<td>{}</td>
+</tr>
+<tr>
+<td><strong>--bs-dropdown-box</strong></td>
+<td>Mixin aplied to menu box that contains menu options</td>
+<td>{}</td>
+</tr>
+<tr>
+<td><strong>--bs-dropdown-menuItem-hover</strong></td>
+<td>Mixin aplied to menu item when it is hovered</td>
+<td>{}</td>
+</tr>
+<tr>
+<td><strong>--bs-dropdown-divider</strong></td>
+<td>Mixin aplied to divider</td>
+<td>{}</td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="bs-dropdown-item" class="anchor" href="#bs-dropdown-item" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>bs-dropdown-item</h3>
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>--bs-dropdown-item</strong></td>
+<td>Mixin applied to bs-dropdown-item</td>
+<td>{}</td>
+</tr>
+<tr>
+<td><strong>--bs-dropdown-item-hovered</strong></td>
+<td>Mixin applied to bs-dropdown-item when is focused</td>
+<td>{}</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dependencies</h2>
+
+<p>Element dependencies are managed via <a href="http://bower.io/">Bower</a>. You can
+install that via:</p>
+
+<pre><code>npm install -g bower
+</code></pre>
+
+<p>Then, go ahead and download the element's dependencies:</p>
+
+<pre><code>bower install
+</code></pre>
+        </section>
+
+        <footer>
+          Bs-dropdown is maintained by <a href="https://github.com/Mortega5">Mortega5</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
