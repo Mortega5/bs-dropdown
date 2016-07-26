@@ -27,6 +27,7 @@ Custom property | Description | Default
 `--bs-dropdown-menuItem-hover` | Mixin aplied to menu item when it is hovered | `{}`
 `--bs-dropdown-divider` | Mixin aplied to divider | `{}`
 
+@demo demo/index.html
 -->
 
 <dom-module id="bs-dropdown">
@@ -139,12 +140,12 @@ Custom property | Description | Default
   }
   </style>
   <div class="dropdown" id="dropdown" reverse$="{{dropup}}">
-    <button id="btn_toggle" class="btn-toggle" type="button" on-click="toggle"  on-tab="toggle" aria-haspopup="true" aria-expanded="true">
+    <button id="btn_toggle" class="btn-toggle" type="button" aria-haspopup="true" aria-expanded="true">
       {{btn_title}}
       <span class="caret"></span>
     </button>
     <template is="dom-if" if="{{opened}}">
-      <div class="dropdown-menu" on-click="toggle">
+      <div class="dropdown-menu">
         <content select=".menu-content"></content>
         <template is="dom-repeat" items="{{menu_items}}" index-as="item_no">
           <div>
@@ -188,6 +189,9 @@ Polymer({
         return [];
       }
     }
+  },
+  listeners: {
+    'click':'toggle'
   },
   ready: function(){
     this.listen(document,'click','_blurClose');
