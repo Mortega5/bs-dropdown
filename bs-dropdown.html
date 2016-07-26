@@ -220,7 +220,7 @@ Polymer({
       var target = e.target;
       var found = false;
       while(target.tagName!=='HTML' && !found) {
-        if (target.parentElement === this){
+        if (target === this){
           found = true;
         }
         target = target.parentElement;
